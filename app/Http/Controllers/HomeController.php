@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Division;
-use App\Http\Requests\StoreDivisionRequest;
-use App\Http\Requests\UpdateDivisionRequest;
+use Illuminate\Http\Request;
 
-class DivisionController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,14 @@ class DivisionController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        $divisions = Division::all();
+
+        // dd($users,$divisions);
+        return view('home',[
+            'users' => $users,
+            'divisions' => $divisions
+        ]);
     }
 
     /**
@@ -31,10 +38,10 @@ class DivisionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreDivisionRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreDivisionRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +49,10 @@ class DivisionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Division  $division
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Division $division)
+    public function show($id)
     {
         //
     }
@@ -53,10 +60,10 @@ class DivisionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Division  $division
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Division $division)
+    public function edit($id)
     {
         //
     }
@@ -64,31 +71,22 @@ class DivisionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateDivisionRequest  $request
-     * @param  \App\Models\Division  $division
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDivisionRequest $request, Division $division)
+    public function update(Request $request, $id)
     {
-        dd($request->name);
-        $request->validate([
-            'name' => 'required|string'
-        ]);
-
-        $division->update([
-            'name' => $request->name
-        ]);
-
-        return redirect()->back();
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Division  $division
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Division $division)
+    public function destroy($id)
     {
         //
     }

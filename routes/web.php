@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DivisionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomeController::class,'index']);
+
+Route::prefix('division')->name('division.')->group(function () {
+    Route::post('tambah', [DivisionController::class, 'tambah'])->name('tambah');
 });
+Route::resource('division', DivisionController::class);
+
+Route::prefix('user')->name('user.')->group(function () {
+    Route::get('delete/{id}', [UserController::class, 'delete'])->name('delete');
+});
+Route::resource('user', UserController::class);

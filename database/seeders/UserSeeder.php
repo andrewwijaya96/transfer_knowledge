@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class DivisionSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,15 +15,18 @@ class DivisionSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('divisions')->insert([
+        DB::table('users')->insert([
             [
-                'name' => 'Publication'
+                'name' => 'Jovanna Mellisa',
+                'division_id' => 1
             ],
             [
-                'name' => 'Design'
+                'name' => 'Michelle Angela',
+                'division_id' => 2
             ],
             [
-                'name' => 'Development'
+                'name' => 'Wen Sen Tan',
+                'division_id' => 3
             ],
         ]);
     }

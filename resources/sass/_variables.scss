@@ -1,0 +1,39 @@
+$font-family: 'Poppins', sans-serif;
+$s-1 : 1px;
+$s-2: 2px;
+$s-3: 3px;
+$s-4: 4px;
+$s-5: 5px;
+$s-6: 6px;
+$s-7: 7px;
+$s-8: 8px;
+$s-9: 9px;
+$s-10: 10px;
+*{
+      font-family: $font-family;
+}
+
+.cardCustom{
+      border: $s-1 solid white;
+      border-radius: $s-4;
+      padding: $s-10;
+      width: 350px;
+      margin: $s-4;
+}
+
+.division{
+      font-size: 11px;
+}
+
+.buttonCustom{
+      padding: $s-5;
+      border-radius: 4px;
+
+      color: black;
+      background: white;
+
+      font-size: 12px;
+      text-decoration:none;
+      text-align: center;
+      font-weight: 500;
+}
