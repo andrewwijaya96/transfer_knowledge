@@ -110,13 +110,12 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        dd($user);
-        $user->truncate();
+        $user->delete();
 
         return redirect()->back()->with('success',"<strong>$user->name</strong>".' have been deleted!');
     }
 
-    public function delete(User $user)
+    public function delete($user)
     {
 
         $user = User::firstWhere('id','=',$user);

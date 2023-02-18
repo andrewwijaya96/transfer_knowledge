@@ -10,11 +10,9 @@
 </head>
 <body>
       <main>
-            <div id="home">
-                  {{-- <x-navbar></x-navbar> --}}
+            <div>
                   {{$slot}}
             </div>
-            
       </main>
 </body>
 </html>

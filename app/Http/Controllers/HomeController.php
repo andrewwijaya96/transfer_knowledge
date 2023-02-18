@@ -23,6 +23,7 @@ class HomeController extends Controller
             'users' => $users,
             'divisions' => $divisions
         ]);
+        // return view('home2');
     }
 
     /**
