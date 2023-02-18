@@ -65,10 +65,10 @@
                                           <p class="division">
                                                 {{ $user->division->name }}
                                           </p>
-                                          <form action="{{ route('user.destroy',$user->id) }}" method="post" class="col-12">
+                                          <form action="{{ route('user.destroy',$user->id) }}" method="post" class="">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="buttonCustom d-block mb-2 col-12 border-0">Delete</button>
+                                                <button type="submit" id="delete-user" class="buttonCustom d-block mb-2 col-12 border-0">Delete</button>
                                           </form>
                                           <a href="" class="buttonCustom d-block mb-2" data-bs-toggle="modal" data-bs-target="#userUpdate{{ $user->id }}">Update</a>
                                           {{-- modal update --}}
