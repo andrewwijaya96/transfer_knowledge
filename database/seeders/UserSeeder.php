@@ -17,15 +17,15 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => 'Jovanna Mellisa',
+                'name' => 'ABC',
                 'division_id' => 1
             ],
             [
-                'name' => 'Michelle Angela',
+                'name' => 'CDE',
                 'division_id' => 2
             ],
             [
-                'name' => 'Wen Sen Tan',
+                'name' => 'EFG',
                 'division_id' => 3
             ],
         ]);
