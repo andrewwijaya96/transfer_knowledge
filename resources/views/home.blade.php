@@ -1,13 +1,15 @@
-<x-app title="CRUD | Routing">
-      <div class="container-fluid p-0">
-            
-            
+<x-app title="Bootstrap">
 
-            <section id="header" class="bg-dark" >
-                 
+      <section>
+            <div class="container">
+                  <div class="row">
+                        <div class="col">
+                              <p>
+                                    Hello World
+                              </p>
+                        </div>
+                  </div>
+            </div>
+      </section>
 
-            </section>
-            
-      </div>
-      
 </x-app>

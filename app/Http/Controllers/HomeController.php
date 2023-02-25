@@ -15,15 +15,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        $divisions = Division::all();
+        // $users = User::all();
+        // $divisions = Division::all();
 
-        // dd($users,$divisions);
-        return view('home',[
-            'users' => $users,
-            'divisions' => $divisions
-        ]);
-        // return view('home2');
+        return view('home');
     }
 
     /**
